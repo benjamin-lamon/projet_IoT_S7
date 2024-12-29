@@ -11,7 +11,7 @@ Vous trouverez l'ensemble des commandes sur
 
 Vous pouvez alors accéder aussi à l'interface web sur ```localhost:[port]```. Vous serez automatiquement redirigé vers la page d'accueil.
 
-Une fois avoir lancé le serveur, assurez-vous d'avoir exécuté les commandes bash dans curlCommands.txt (vous pouvez utiliser ```bash curlCommands.txt```)
+Une fois le serveur lancé, assurez-vous d'avoir exécuté les commandes bash dans curlCommands.txt (vous pouvez utiliser ```bash curlCommands.txt```)
 
 
 
