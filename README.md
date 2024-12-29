@@ -11,11 +11,13 @@ Vous trouverez l'ensemble des commandes sur
 
 Vous pouvez alors accéder aussi à l'interface web sur ```localhost:[port]```. Vous serez automatiquement redirigé vers la page d'accueil.
 
-Pour créer la base de données, exécutez ```sqlite3 logement.db<logement.sql```
+### Protocole à suivre pour le bon fonctionnement du serveur
 
-Une fois le serveur lancé, assurez-vous d'exécuter les commandes bash dans curlCommands.txt (vous pouvez utiliser ```bash curlCommands.txt```)
-
-
+1 - Créez la base de données. Exécutez ```sqlite3 logement.db<logement.sql```
+2 - Lancez le serveur avec la commande ```fastapi dev main.py```
+3 - Une fois le serveur lancé, assurez-vous d'exécuter les commandes bash dans curlCommands.txt (vous pouvez utiliser ```bash curlCommands.txt```)
+4 - Go to ```localhost:[port]```
+5 - You're done, enjoy.
 
 
 
