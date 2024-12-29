@@ -21,16 +21,16 @@ Avant de lancer le serveur, assurez-vous d'avoir exécuté les commandes bash da
 Vous trouvrez le modèle relationnel de la base de données dans le fichier .png associé. Il y aura cependant quelques différences étant donné que celui-ci a été fait lors du premier TP. J'ai probablement rajouté quelques champs en plus par-ci par-là.
 
 #### Questions 2 et 3
-Dans le fichier logement.sql, vous trouverez les ordres correspondant entre les lignes 1 et 82.
+Dans le fichier logement.sql, vous trouverez les ordres correspondants entre les lignes 1 et 82.
 
 #### Questions 4 à 8
 Toujours dans le même fichier, des lignes 110 à 240.
 
-On peut alors créer le fichier de la base de donnée en utilisant la commande : 
+On peut alors créer le fichier de la base de données en utilisant la commande : 
 ```sqlite3 logement.db<logement.sql```
 
 ### 1.2 Remplissage de la base de données
-Vous pouvez éxecuter le fichier ```remplissage2.py```. Toutes les explications relatives à la cohérence des données sont données dedans, à l'exception du champ timestamp pour les mesures car c'est un champ rempli automatiquement.
+Vous pouvez éxecuter le fichier ```remplissage2.py```. Toutes les explications relatives à la cohérence des données sont en commentaire, à l'exception du champ timestamp pour les mesures car celui-ci est rempli automatiquement.
 
 ## 2 - Serveur RESTful
 ### 2.1 - Exercice 1 : remplissage de la base de données
@@ -70,10 +70,10 @@ curl -X 'POST' \
 ### 2.1 - Exercice 2 : Serveur Web
 Comme dit précédemment, il faut lancer le serveur web ```main.py``` avec FastAPI.
 
-Pour la partie serveur, vous trouverez le code Python à la ligne 70. Pour la partie HTML, il faut se référer aux fichier ```item.html``` et ```test.html```
+Pour la partie serveur, vous trouverez le code Python à la ligne 70. Pour la partie HTML, il faut se référer aux fichiers ```item.html``` et ```test.html```
 
 Le résultat de cet exercice se trouve sur ```localhost:[port]/ChartByTimeStamp ```. 
-De plus, on peut accéder à un mois précis en se connectant sur ```localhost:[port]/ChartByTimeStamp/[mois]/[année] ```
+De plus, on peut consulter les factures d'un mois précis en se connectant sur ```localhost:[port]/ChartByTimeStamp/[mois]/[année] ```
 
 ### 2.3 - Exercice 3 : météo
 Partie serveur : trouvable à la ligne 100 + ```localhost:[port]/weather``` (Les prévisions météos sont aussi sur la page d'accueil)
