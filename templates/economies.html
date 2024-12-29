@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="fr">
+	<head>
+		<!-- "inclure" Bootstrap5 -->
+		<!-- Latest compiled and minified CSS -->
+ 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ 		<!-- Latest compiled JavaScript -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+		
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		<!--Graphique mois-->
+		<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart', 'bar']});
+			google.charts.setOnLoadCallback(drawStuff);
+
+			function drawStuff() {
+
+			var chartDiv = document.getElementById('chart_divM');
+
+			var data = google.visualization.arrayToDataTable([
+				['{{Entete[0]}}','{{Entete[1]}}'],
+				{% for x in ListeMois %}
+				['{{x[0]}}',{{x[1]}}],
+				{% endfor %}
+			]);
+			var classicOptions = {
+          		width: 450,
+				height: 250,
+          		series: {
+					0: {targetAxisIndex: 0},
+				},
+				title: 'Consommation - {{MoisActuel}}',
+				vAxes: {
+					// Adds titles to each axis.
+					0: {title: ''},
+				}
+			};
+
+
+			function drawClassicChart() {
+				var classicChart = new google.visualization.ColumnChart(chartDiv);
+          		classicChart.draw(data, classicOptions);
+			}
+
+			drawClassicChart();
+		};
+		</script>
+
+
+		<!--Graphique annee-->
+		<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart', 'bar']});
+			google.charts.setOnLoadCallback(drawStuff);
+
+			function drawStuff() {
+
+			var chartDiv = document.getElementById('chart_divA');
+
+			var data = google.visualization.arrayToDataTable([
+				['{{Entete[0]}}','{{Entete[1]}}'],
+				{% for x in ListeAnnee %}
+				['{{x[0]}}',{{x[1]}}],
+				{% endfor %}
+			]);
+
+			var classicOptions = {
+          		width: 450,
+				height: 250,
+          		series: {
+					0: {targetAxisIndex: 0},
+				},
+				title: 'Consommation - année {{AnneeActuelle}}',
+				vAxes: {
+					// Adds titles to each axis.
+					0: {title: 'parsecs'},
+				}
+			};
+
+
+			function drawClassicChart() {
+				var classicChart = new google.visualization.ColumnChart(chartDiv);
+          		classicChart.draw(data, classicOptions);
+			}
+
+			drawClassicChart();
+		};
+		</script>
+
+
+
+		<title>Consommation - Logement éco-reponsable</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div class="text-center p-5 bg-secondary text-white">
+			<h1>Consommation - Logement éco-responsable</h1>
+		</div>
+		<div class="d-grid">
+			<div class="btn-group">
+				<a href="{{ url_for('accueil') }}" class="btn btn-primary">Accueil</a>
+				<a href="{{ url_for('consommation') }}" class="btn btn-primary">Consommation</a>
+				<a href="{{ url_for('capteurs') }}" class="btn btn-primary">Capteurs/Actionneurs</a>
+				<a href="{{ url_for('economies') }}" class="btn btn-primary">Économies</a>
+				<a href="{{ url_for('configuration') }}" class="btn btn-primary">Configuration</a>
+			</div>
+		</div>
+		<div class="container mt-3">
+			<h1>Économies réalisées</h1>
+			<p>Les économies d'énergies sont comprises entre 8 et 15%. (Source : <a href="https://www.lesechos.fr/2014/02/lenergie-fer-de-lance-de-la-maison-connectee-272216">Les Echos</a>) </p>
+		</div>
+			<div class="d-flex justify-content-center align-items-center container mt-3">
+				<div class="row">
+				<!--Boutons-->
+				<div class="col-sm-6">
+					<button type="button" class="btn btn-light" data-bs-toggle="collapse" data-bs-target="#annee">Par année</button>
+					<div id="annee" type="button" class="collapse">	
+						<!--Afficher le graphique-->
+						<div id="chart_divA" style="width: 450px; height: 250px;"></div>
+					</div> 
+				</div>
+				<br>
+				<div class="col-sm-6">
+					<button type="button" class="btn btn-light" data-bs-toggle="collapse" data-bs-target="#mois">Par mois</button>
+					<div id="mois" type="button" class="collapse">	
+						<!--Afficher le graphique-->
+						<div id="chart_divM" style="width: 450px; height: 500px;"></div>
+				</div> 
+			</div>
+		</div>
+	</body>
+</html>
