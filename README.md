@@ -14,9 +14,13 @@ Vous pouvez alors accéder aussi à l'interface web sur ```localhost:[port]```. 
 ### Protocole à suivre pour le bon fonctionnement du serveur
 
 1 - Créez la base de données. Exécutez ```sqlite3 logement.db<logement.sql```
+
 2 - Lancez le serveur avec la commande ```fastapi dev main.py```
+
 3 - Une fois le serveur lancé, assurez-vous d'exécuter les commandes bash dans curlCommands.txt (vous pouvez utiliser ```bash curlCommands.txt```)
+
 4 - Go to ```localhost:[port]```
+
 5 - You're done, enjoy.
 
 
