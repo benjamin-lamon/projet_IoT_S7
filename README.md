@@ -19,7 +19,7 @@ Vous pouvez alors accéder aussi à l'interface web sur ```localhost:[port]```. 
 
 3 - Une fois le serveur lancé, assurez-vous d'exécuter les commandes bash dans curlCommands.txt (vous pouvez utiliser ```bash curlCommands.txt```)
 
-4 - Go to ```localhost:[port]```
+4 - Go to ```http://localhost:[port]```
 
 5 - You're done, enjoy.
 
