@@ -91,17 +91,17 @@ Partie HTML : fichier ```weather.html```
 
 ## 3 - HTML/CSS/Javascript
 ### 1 - Consommation
-Ligne 290 sur le serveur. Pour y accéder : ```localhost:[port]/consommation```
+Ligne 290 dans le code source du serveur. Pour y accéder : ```localhost:[port]/consommation```
 Fichier HTML : ```consommation.html```
 
 ### 2 - État des capteurs/actionneurs
-Ligne 320 sur le serveur. Pour y accéder : ```localhost:[port]/capteurs```
+Ligne 320 dans le code source du serveur. Pour y accéder : ```localhost:[port]/capteurs```
 Fichier HTML : ```capteurs.html```
 
 ### 3 - Économies réalisées
-Ligne 350 sur le serveur. Pour y accéder : ```localhost:[port]/economies```
+Ligne 350 dans le code source du serveur. Pour y accéder : ```localhost:[port]/economies```
 Fichier HTML : ```economies.html```
 
 ### 4 - Configuration
-Ligne 380 sur le serveur. Pour y accéder : ```localhost:[port]/configuration```
+Ligne 380 dans le code source du serveur. Pour y accéder : ```localhost:[port]/configuration```
 Fichier HTML : ```configuration.html```
