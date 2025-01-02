@@ -44,7 +44,7 @@ Vous pouvez éxecuter le fichier ```remplissage2.py```. Toutes les explications 
 
 ## 2 - Serveur RESTful
 ### 2.1 - Exercice 1 : remplissage de la base de données
-En ce qui concerne le remplissage de la base de données, les lignes 30 à 70 de ```main.py ``` nous donnent les fonctions qui nous donneront les requêtes pour remplir la base de données en consultant ```localhost:[port]/docs ```. En ce qui concerne la consultation des données, on peut utiliser https://sqliteviewer.app/ pour consulter si ce qu'on a ajouté a bien été pris en compte (en plus d'avoir une présentation plus claire et lisible).
+En ce qui concerne le remplissage de la base de données, les lignes 30 à 70 de ```main.py ``` nous donnent les fonctions qui nous donneront les requêtes pour remplir la base de données en consultant ```localhost:[port]/docs ```. Cependant, il est important de saisir les informations au caractère près. En effet, ces requêtes sont case sensitive, donc pas le droit à l'erreur. En ce qui concerne la consultation des données, on peut utiliser https://sqliteviewer.app/ pour consulter si ce qu'on a ajouté a bien été pris en compte (en plus d'avoir une présentation plus claire et lisible).
 
 e.g.
 ```bash
