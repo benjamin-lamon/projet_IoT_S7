@@ -494,7 +494,7 @@ async def form_post3(request: Request, adresse:str,reference:str,piece:str):
 
 @app.post("/AjoutCapteur3",response_class=HTMLResponse)
 async def form_post3(request: Request, adresse:str, reference:str,piece:str, sellist1: list = Form(...)):
-	port = random.randrange(1025,10000)
+	port = random.randrange(1025,65535)
 	ok = False
 
 	listePorts = list()
